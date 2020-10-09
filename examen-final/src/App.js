@@ -24,7 +24,7 @@ function AppMenu() {
     // Definicion del menu principal
     <Menu onClick={(value) => setCurrent(value)} selectedKeys={[current]} mode="horizontal">
       <Menu.Item key="pokemon" icon={<AppstoreOutlined />}>
-        <Link to="/cards">Lista de Pokemones</Link>
+        <Link to="/Pokemons">Lista de Pokemones</Link>
       </Menu.Item>
     </Menu>
   );
@@ -47,7 +47,7 @@ function App() {
   return (
     <Router>
       <Layout>
-        <Header style={{ color: 'white' , fontSize: 30, textAlign: 'center'}}>
+        <Header style={{ color: 'white', fontSize: 30, textAlign: 'center'}}>
             <div>Pokemones</div>
         </Header>
         <Content>

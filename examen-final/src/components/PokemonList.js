@@ -50,12 +50,6 @@ function PokemonList (props) {
           dataIndex: 'description',
           key: 'description',
         },
-        // {
-        //   title: 'Creation Date',
-        //   dataIndex: 'creationDate',
-        //   key: 'creationDate',
-        //   render: date => moment(date).format('DD/MM/YYYY')
-        // },
         {
             title: 'Limit Date',
             dataIndex: 'limitDate',
