@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { AppstoreOutlined } from '@ant-design/icons';
 import PokemonList from './components/PokemonList';
 import PokemonForm from './components/PokemonForm';
+import Pokemon from './components/Pokemon';
 
 
 const { Header, Footer, Content } = Layout;
@@ -23,7 +24,7 @@ function AppMenu() {
     // Definicion del menu principal
     <Menu onClick={(value) => setCurrent(value)} selectedKeys={[current]} mode="horizontal">
       <Menu.Item key="pokemon" icon={<AppstoreOutlined />}>
-        <Link to="/pokemons">Lista de Pokemones</Link>
+        <Link to="/cards">Lista de Pokemones</Link>
       </Menu.Item>
     </Menu>
   );
@@ -32,13 +33,13 @@ function AppMenu() {
 function PokemonsRoutes({ match }) {
   return (
     <>
-      <Route exact path={`${match.path}/new`} component={PokemonForm} />
+      <Route exact path={`${match.path}/new`} component={Pokemon} />
       <Route
         exact
         path={`${match.path}/edit/:pokemonId`}
-        component={PokemonForm}
+        component={Pokemon}
       />
-      <Route exact path={`${match.path}/`} component={PokemonList} />
+      <Route exact path={`${match.path}/`} component={Pokemon} />
     </>
   );
 }
